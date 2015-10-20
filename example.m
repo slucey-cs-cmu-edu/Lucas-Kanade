@@ -29,7 +29,7 @@ noise_p = gnd_p + dp;
 h = a.draw(noise_p, dsize,'b-','LineWidth',2); % Draw the ground-truth
 
 % Step 3. Apply the LK algorithm
-lk = LK_IC(T_0); 
+lk = LK(T_0); 
 lk.fit(img, noise_p, 30, h); % Append h here to draw the result on the image
 
 % Step 4. Get the timing info
