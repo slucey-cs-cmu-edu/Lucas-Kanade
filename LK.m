@@ -9,13 +9,7 @@
 % >> p = lk.fit(img, p0, 10); % Fit with LK
 %
 % Written by Simon Lucey 2015
-classdef LK        
-    % Define constant properties
-    properties(Constant)
-        P = 6; % Degrees of freedom in the warp (for the homography)
-        num_iter = 10; % Number of iterations in the LK algorithm
-    end
-    
+classdef LK            
     % Define other variables need for calibration
     properties
             % Define other properties
@@ -36,12 +30,10 @@ classdef LK
         % with the template we want to match against for LK. 
         function o = LK(tmplt)        
             % Pre-compute Sobel filters in x- and y- directions
-            %o.fx = fspecial('sobel'); o.fy = o.fx';  
             o.fx = [-1,1]; o.fy = o.fx'; 
             
             % Pre-compute the Gaussian blur filter
             o.fb = fspecial('gaussian',[5,5], 3);   
-            %o.fb = fspecial('average',[5,5]);   
             
             % Set the template
             if isinteger(tmplt)
