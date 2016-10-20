@@ -1,5 +1,5 @@
 % Class for applying the Lucas-Kanade algorithm that we are studying in
-% 16423 as an object class. Goal here is for students to translate this
+% as an object class. Goal here is for students to translate this
 % code into a C++ class, using OpenCV, that can run in Xcode. 
 %
 % Inherits properties from LK class. 

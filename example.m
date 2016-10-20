@@ -20,7 +20,7 @@ tmplt_pts = [0, dsize(2)-1, 0, dsize(2)-1;
 a = Affine; % Define an Affine object
 gnd_p = a.fit(tmplt_pts, pts); % Get the ground-truth warp
 T_0 = a.imwarp(img, gnd_p, dsize); % Define the template
-clf; imagesc(img); axis off; axis image; % Display the image
+clf; imagesc(img); colormap('gray'); axis off; axis image; % Display the image
 a.draw(gnd_p, dsize,'r-','LineWidth',2); % Draw the ground-truth
 
 % Step 2. Perturb the warp 
